@@ -7,6 +7,21 @@ body {
     user-select: none;
 }
 
-
+.sobre > img {
+    margin-top: 0px;
+    margin-left: 25px;
+    float: inline-end;
+}
+.sobre > p {
+    margin-left: 150px;
+    margin-top: 50px;
+    font-size: 22px;
+}
+.sobre > {
+    background-color: #E5DBC8;
+    margin-left: 25px;
+    margin-top: -auto;
+    display: flex;
+}
 
 
