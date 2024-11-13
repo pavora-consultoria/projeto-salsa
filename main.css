@@ -3,3 +3,10 @@
     padding: 0;
 }
 
+body {
+    user-select: none;
+}
+
+
+
+
