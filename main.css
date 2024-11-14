@@ -79,7 +79,7 @@ img {
     transform: translateY(-10px);
 }
 
-.icon-whatssap > img {
+a > img {
     width: 60px;
 }
 
