@@ -79,7 +79,7 @@ img {
     transform: translateY(-10px);
 }
 
-a > img {
+.icon-whatssap > a > img {
     width: 60px;
 }
 
@@ -96,7 +96,6 @@ a > img {
     align-items: center;
     justify-content: center;
     margin-top: 400px;
-    
 }
 
 .sobre {
@@ -117,6 +116,73 @@ a > img {
     margin-left: 10%;
     margin-right: 10%;
     font-size: 18px;
+}
+
+.rodape {
+    background-color: #f5ecda;
+    color: #5f0214;
+}
+
+.colunas {
+    display: flex;
+}
+
+.coluna {
+    display: flexbox;
+    flex-direction: column;
+}
+
+.titulo{
+    margin: 100px 0px 0px 0px;
+}
+
+.distancia {
+    margin: 0px 0px 0px 300px;
+}
+
+.final {
+    font-size: 20px;
+}
+
+.fim {
+    display: flex;
+    background-color: #5f0214;
+    color: yellow;
+}
+
+.avaliacao {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 200px;  
+}
+
+.avaliacao1 {
+    height: 150px;
+    width: 700px;
+    display: flexbox;
+    margin: 0px 50px;
+    border: black 3px solid;
+    border-radius: 10px;
+}
+
+.avaliacao2 {
+    height: 150px;
+    width: 700px;
+    display: flexbox;
+    flex-direction: column;
+    border: black 3px solid;
+    border-radius: 10px;
+}
+
+
+.perfil {
+    width: 3vw;
+    margin: 25px 25px;
+}
+
+.estrela {
+    width: 4vw;
 }
 
 
