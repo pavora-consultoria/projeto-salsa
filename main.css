@@ -1,27 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); 
+
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
-    user-select: none;
+    user-select: none;  
 }
 
-.sobre > img {
-    margin-top: 0px;
-    margin-left: 25px;
-    float: inline-end;
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    background-color: #5f0214;
 }
-.sobre > p {
-    margin-left: 150px;
-    margin-top: 50px;
-    font-size: 22px;
+
+img {
+    width: 140px;
 }
-.sobre > {
-    background-color: #E5DBC8;
-    margin-left: 25px;
-    margin-top: -auto;
+
+.nav-item > a {
+    font-family: "DM Sans", sans-serif;
+    color: #ffde59;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav-item > a:hover {
+    text-decoration: underline;
+    color: #fde99a;
+    transition: 1.5s ease;
+    font-weight: bold;
+}
+
+.carousel-item > img {
+    height: 75vh;
+    object-fit: cover;
+}
+
+.home {
+    height: 100vh;
+}
+
+.pratos-home {
+    /* max-width: 1200px; */
+    /* width: 100%; */
+    padding: 100px;
+}
+
+.home-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-whatssap > img {
+    width: 60px;
+}
+
+.icon-whatssap {
+    margin-top: 60px;
+    right: 20px;
+    position: absolute;
+    position: fixed; 
+    cursor: pointer;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 400px;
+    
+}
+
+.sobre {
+    height: 100vh;
+}
+
+.sobre-img > img {
+    width: 900px;
+}
+
+.sobre-img {
+    display: flex;
+    justify-content: center;
+}
+
+.historia-sobre {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 18px;
+}
+
+
+
+
 
 
