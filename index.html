@@ -1,242 +1,429 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante, Lanchonete e Pizzaria</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-</head>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
 
-<body style="background-color: #e5dbc8;">
-
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-    
-                <div class="logo-nav">
-                    <a class="navbar-brand" href="#">
-                        <img src="https://ik.imagekit.io/mnz3yzqzot/logo-salsa.png?updatedAt=1731557264706" alt="Logo restaurante salsa.">
-                    </a>
+      <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div class="container-fluid">
+          <div class="logo-nav">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://ik.imagekit.io/mnz3yzqzot/logo-salsa.png?updatedAt=1731557264706"
+                alt="Logo restaurante salsa."
+              />
+            </a>
+          </div>
+
+          <ul class="navbar-nav" id="navbar">
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">Cardápio</a>
+            </li>
+            <li
+              class="nav-item px-3"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+            >
+              <a class="nav-link" id="reserva" href="#">Reserva</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+
+          <div class="menu-hamburguer">
+            <img id="hamburguer-img" src="images/hamburger.png" alt="menu" />
+
+            <div id="menu-conteudo">
+              <div class="logo-menu-hamburger">
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="https://ik.imagekit.io/mnz3yzqzot/logo-salsa.png?updatedAt=1731557264706"
+                    alt="Logo restaurante salsa."
+                  />
+                </a>
+                <div class="close" onclick="fecharMenuHamburguer()">
+                  <img id="close-img" src="images/close.png" alt="" />
                 </div>
-                
-                <div class="conteudo">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cardápio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reserva</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                    </ul>
+              </div>
+
+              <div class="li-itens">
+                <div class="li-item" onclick="fecharMenuHamburguer()">
+                  <a class="nav-link" href="#">Início</a>
                 </div>
-    
+                <div class="li-item" onclick="fecharMenuHamburguer()">
+                  <a class="nav-link" href="#sobre">Sobre</a>
+                </div>
+                <div class="li-item" onclick="fecharMenuHamburguer()">
+                  <a class="nav-link" href="#">Cardápio</a>
+                </div>
+                <div
+                  class="li-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  onclick="fecharMenuHamburguer()"
+                >
+                  <a class="nav-link" href="#">Reserva</a>
+                </div>
+                <div class="li-item" onclick="fecharMenuHamburguer()">
+                  <a class="nav-link" href="#">Contato</a>
+                </div>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
+    <div id="icon-whatssap">
+      <a
+        href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora"
+        target="_blank"
+      >
+        <img
+          src="https://ik.imagekit.io/mnz3yzqzot/icon-whats-marsala.png?updatedAt=1731557250921"
+          alt="ícone whatssap."
+        />
+      </a>
+    </div>
+
+    <div class="modal" id="modal" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" required id="nome" />
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Celular:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  required
+                  id="telefone"
+                  placeholder="(00) 00000-0000"
+                  pattern="^\(\d{2}\) \d{5}-\d{4}$"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="quantidade" class="form-label"
+                  >Número de pessoas:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  required
+                  id="quantidade"
+                  max="6"
+                  min="1"
+                  value="1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="data" class="form-label">Data da Reserva:</label>
+                <div class="d-flex">
+                  <input
+                    type="date"
+                    class="form-control me-2"
+                    required
+                    id="data"
+                  />
+                  <select
+                    id="horarios"
+                    required
+                    name="horarios"
+                    class="form-select"
+                  >
+                    <option value="" disabled selected>
+                      Selecione o horário
+                    </option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                    <option value="23:00">23:00</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              onclick="enviarSMS()"
+            >
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main>
+      <div class="home">
+        <section>
+          <div
+            id="carousel-exemplo"
+            class="carousel carousel-fade"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img
+                  class="d-block w-100"
+                  src="https://ik.imagekit.io/mnz3yzqzot/Banner%20Promo%C3%A7%C3%A3o%20Pizzaria%20Simples%20Vermelho,%20Bege%20e%20Branco.png?updatedAt=1731613848127"
+                  alt="Banner Pizza."
+                />
+              </div>
 
-        <div class="home">
-            <section>
-                
-                <div id="carousel-exemplo" class="carousel carousel-fade" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  class="d-block w-100"
+                  src="https://ik.imagekit.io/mnz3yzqzot/Banner%20de%20lanche%20hamb%C3%BArguer%20fogo%20moderno%20vermelho%20(1).png?updatedAt=1731613838671"
+                  alt="Banner Cerveja."
+                />
+              </div>
 
-                        <div class="carousel-item active" data-bs-interval="2000">
-                            <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/25.png?updatedAt=1731556741235" alt="Imagem prato feijoada.">
-                        </div>
-                    
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/Yellow%20and%20Pink%20Modern%20Simple%20Restaurant%20Landing%20Page%20Website%20UI%20Prototype%20(3).png?updatedAt=1731563231277" alt="Imagem Hamburguer com cerveja.">
-                        </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  class="d-block w-100"
+                  src="https://ik.imagekit.io/mnz3yzqzot/Macarr%C3%A3o%20bolonhesa%20restaurante%20banner%20gastronomia%20verde%20e%20laranja.png?updatedAt=1731613832965"
+                  alt="Banner macarronada."
+                />
+              </div>
 
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/24.png?updatedAt=1731556741308" alt="Imagem petisco feijoada.">
-                        </div>
-                    
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/26.png?updatedAt=1731556740990" alt="Imagem espetinho churrasco.">
-                        </div>
-        
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/delicious-goulash-ready-dinner%20(1).jpg?updatedAt=1731462732569" alt="Imagem prato picadinho.">
-                        </div>
-
-                    </div>
-
-                        <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                    
-                        <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                
-                </div>
-
-                <div class="icon-whatssap">
-                    <a href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora" target="_blank">
-                        <img src="https://ik.imagekit.io/mnz3yzqzot/icon-whats-marsala.png?updatedAt=1731557250921" alt="ícone whatssap.">
-                    </a>
-                </div>
-
-                <div class="pratos-home">
-                    <div id="cards-container" class="home-container">
-                    </div>
-                </div>
-
-            </section>
-        </div>
-
-        <div class="sobre-container" id="sobre">
-            <section class="sobre">
-                
-                <div class="sobre-img">
-                    <img src="https://ik.imagekit.io/mnz3yzqzot/img-sobre.png?updatedAt=1731558803741" alt="Imagens da logo e pratos">
-                </div>
-
-                <div class="historia-sobre">
-                    <p> Depois de trabalharem em restaurantes no centro de São Paulo, em 1984, Salsa e sua esposa, D.Lúcia, entram de sociedade com um amigo, o Nelson, em um bar de bilhar que ficou conhecido como Sa-Nel situado na Vila Medeiros, onde é o Restaurante Salsa até os dias de hoje. 
-
-                    O Bar e Bilhar possuía somente bebidas, salgados e petiscos, porém a procura por uma comida mais caseira aumentava a cada dia, com isso D. Lúcia começou a cozinhar atendendo a pedidos dos clientes, começou então a ser vendido o simples e tradicional comercial e no ano de 1994, Salsa e D. Lúcia decidem fazer uma reforma na casa, e transformarem o Bar e Bilhar em um Restaurante.
-                        
-                    Desde sua inauguração em 27 de março de 1994, o Restaurante Salsa vem crescendo a cada ano com o crescimento do Restaurante Salsa, atualmente Salsa e D. Lúcia contam com a ajuda de suas filhas, de um dos irmãos do Salsa, e com mais 50 funcionários para manter o sucesso e crescimento da casa.</p>
-                </div>
-                
-            </section>
-        </div>
-
-        <div class="cards">
-            <section>
-
-            </section>
-        </div>
-
-        <div class="contato">
-            <section>
-                
-            </section>
-        </div>
-
-        <section class="contato">
-
-            <div class="avaliacao">
-
-                <div class="avaliacao1">
-
-                    <p>Ermerson Laspa</p>
-
-                    <img src="./images/5 Estrelas.png" alt="Avaliação cinco estrelas" class="estrela">
-                    <p>
-                        Esse restaurante é incrivel! Gostei muito dos prantos, principalmente da feijoada😋, sem falar
-                        do ambiente extremamente confortável
-                    </p>
-                </div>
-
-                <div class="avaliacao2">
-
-                    <p>Thiaguinho Silva</p>
-
-                    <img src="./images/5 Estrelas.png" alt="Avaliação cinco estrelas" class="estrela">
-                    <p>
-                        Muito bom! a partir de hoje vocês ganharam um cliente vitalício, com certeza irei indicar
-                        pros
-                        meus amigos
-                    </p>
-                </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  class="d-block w-100"
+                  src="https://ik.imagekit.io/mnz3yzqzot/Banner%20de%20lanche%20hamb%C3%BArguer%20fogo%20moderno%20vermelho.png?updatedAt=1731614260508"
+                  alt="Banner macarronada."
+                />
+              </div>
             </div>
 
-            <div class="avaliacao">
+            <button
+              data-bs-target="#carousel-exemplo"
+              data-bs-slide="prev"
+              class="carousel-control-prev"
+              type="button"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
 
-                <div class="avaliacao1">
+            <button
+              data-bs-target="#carousel-exemplo"
+              data-bs-slide="next"
+              class="carousel-control-next"
+              type="button"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
 
-                    <p>Luiza Barros</p>
-
-                    <img src="./images/5 Estrelas.png" alt="Avaliação cinco estrelas" class="estrela">
-                    <p>
-                        Amei demais a decoração do lugar e do atendimento aos clientes, voltarei mais vezes nesse
-                        lugar
-                    </p>
-                </div>
-
-                <div class="avaliacao2">
-
-                    <p>Eduardo Madeira</p>
-
-                    <img src="./images/5 Estrelas.png" alt="Avaliação cinco estrelas" class="estrela">
-                    <p>
-                        A comida é muito bem temperada, principalmente a virada paulista, comeria 10 vezes sem
-                        dúvidas😂😁
-                    </p>
-
-                </div>
-            </div>
-
-
+          <div class="pratos-home">
+            <h1 class="pratos-titulo text-center">Pratos do dia</h1>
+            <div id="cards-container" class="home-container"></div>
+          </div>
         </section>
+      </div>
 
-        <footer class="rodape">
+      <div class="sobre-container" id="sobre">
+        <section class="sobre">
+          <div class="sobre-img">
+            <img
+              src="https://ik.imagekit.io/mnz3yzqzot/img-sobre.png?updatedAt=1731558803741"
+              alt="Imagens da logo e pratos"
+            />
+          </div>
 
-            <div class="colunas">
+          <div class="historia-sobre">
+            <p>
+              Depois de trabalharem em restaurantes no centro de São Paulo, em
+              1984, Salsa e sua esposa, D.Lúcia, entram de sociedade com um
+              amigo, o Nelson, em um bar de bilhar que ficou conhecido como
+              Sa-Nel situado na Vila Medeiros, onde é o Restaurante Salsa até os
+              dias de hoje. O Bar e Bilhar possuía somente bebidas, salgados e
+              petiscos, porém a procura por uma comida mais caseira aumentava a
+              cada dia, com isso D. Lúcia começou a cozinhar atendendo a pedidos
+              dos clientes, começou então a ser vendido o simples e tradicional
+              comercial e no ano de 1994, Salsa e D. Lúcia decidem fazer uma
+              reforma na casa, e transformarem o Bar e Bilhar em um Restaurante.
+              Desde sua inauguração em 27 de março de 1994, o Restaurante Salsa
+              vem crescendo a cada ano com o crescimento do Restaurante Salsa,
+              atualmente Salsa e D. Lúcia contam com a ajuda de suas filhas, de
+              um dos irmãos do Salsa, e com mais 50 funcionários para manter o
+              sucesso e crescimento da casa.
+            </p>
+          </div>
+        </section>
+      </div>
 
-                <div class="coluna">
-                    <h3>INFORMAÇÕES DE CONTATO</h3>
-                    <p class="final">(11) 29890-4316</p>
-                    <p class="final">(11) 2983-0025</p>
+      <div class="cards">
+        <section></section>
+      </div>
 
-                    <p  class="titulo final">Av. Nossa Senhora de Loreto, 1050 <br>
-                         Vila Medeiros - Zona Norte - SP</p>
-                </div>
+      <div class="contato">
+        <section></section>
+      </div>
 
-                <div class="coluna distancia">
-                    <h3 >ATENDIMENTO</h3>
-                    <p class="final">Segundas a Sábado</p>
-                    <p class="final">11:00h às 23:00h</p>
+      <section class="contato">
+        <div class="avaliacao">
+          <div class="avaliacao1">
+            <p>Ermerson Laspa</p>
 
-                    <h3 class="titulo">E-MAIL</h3>
-                    <p class="final">sanel@uol.com</p>
-                </div>
+            <img
+              src="./images/5 Estrelas.png"
+              alt="Avaliação cinco estrelas"
+              class="estrela"
+            />
+            <p>
+              Esse restaurante é incrivel! Gostei muito dos prantos,
+              principalmente da feijoada😋, sem falar do ambiente extremamente
+              confortável
+            </p>
+          </div>
 
-                <div class="coluna distancia">
-                    <h4>LOCALIZAÇÃO</h4>
+          <div class="avaliacao2">
+            <p>Thiaguinho Silva</p>
 
-                    <div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2625797444416!2d-46.58454892376206!3d-23.487049858868158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5f0cda677cb%3A0x8a496539554a2e35!2sRestaurante%20Salsa!5e0!3m2!1sen!2sbr!4v1731439559265!5m2!1sen!2sbr"
-                            width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
-                    </div>
-                </div>
+            <img
+              src="./images/5 Estrelas.png"
+              alt="Avaliação cinco estrelas"
+              class="estrela"
+            />
+            <p>
+              Muito bom! a partir de hoje vocês ganharam um cliente vitalício,
+              com certeza irei indicar pros meus amigos
+            </p>
+          </div>
+        </div>
+
+        <div class="avaliacao">
+          <div class="avaliacao1">
+            <p>Luiza Barros</p>
+
+            <img
+              src="./images/5 Estrelas.png"
+              alt="Avaliação cinco estrelas"
+              class="estrela"
+            />
+            <p>
+              Amei demais a decoração do lugar e do atendimento aos clientes,
+              voltarei mais vezes nesse lugar
+            </p>
+          </div>
+
+          <div class="avaliacao2">
+            <p>Eduardo Madeira</p>
+
+            <img
+              src="./images/5 Estrelas.png"
+              alt="Avaliação cinco estrelas"
+              class="estrela"
+            />
+            <p>
+              A comida é muito bem temperada, principalmente a virada paulista,
+              comeria 10 vezes sem dúvidas😂😁
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <div class="colunas">
+          <div class="coluna">
+            <h3>INFORMAÇÕES DE CONTATO</h3>
+            <p class="final">(11) 29890-4316</p>
+            <p class="final">(11) 2983-0025</p>
+
+            <p class="titulo final">
+              Av. Nossa Senhora de Loreto, 1050 <br />
+              Vila Medeiros - Zona Norte - SP
+            </p>
+          </div>
+
+          <div class="coluna distancia">
+            <h3>ATENDIMENTO</h3>
+            <p class="final">Segundas a Sábado</p>
+            <p class="final">11:00h às 23:00h</p>
+
+            <h3 class="titulo">E-MAIL</h3>
+            <p class="final">sanel@uol.com</p>
+          </div>
+
+          <div class="coluna distancia">
+            <h4>LOCALIZAÇÃO</h4>
+
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2625797444416!2d-46.58454892376206!3d-23.487049858868158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5f0cda677cb%3A0x8a496539554a2e35!2sRestaurante%20Salsa!5e0!3m2!1sen!2sbr!4v1731439559265!5m2!1sen!2sbr"
+                width="350"
+                height="200"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="mapa"
+              ></iframe>
             </div>
+          </div>
+        </div>
 
-            <div class="fim">
-                <p class="final">Todos os direitos reservados | Copyright &#169 2024 | Desenvolvido por: PAVORA</p>
-            </div>
-        </footer>
-
+        <div class="fim">
+          <p class="final">
+            Todos os direitos reservados | Copyright 2024 | Desenvolvido por:
+          </p>
+        </div>
+      </footer>
     </main>
 
     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
       </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
