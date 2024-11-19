@@ -187,10 +187,13 @@ img {
 
 .sobre {
   height: 100vh;
+  font-size: 20px;
+  margin-bottom: 200px;
 }
 
 .sobre-img > img {
   width: 900px;
+  margin-top: 100px;
 }
 
 .sobre-img {
