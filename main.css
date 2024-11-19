@@ -176,6 +176,15 @@ img {
   margin-top: 400px;
 }
 
+/* SOBRE NÓS */
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 400px;
+}
+
 .sobre {
   height: 100vh;
 }
@@ -187,26 +196,17 @@ img {
 .sobre-img {
   display: flex;
   justify-content: center;
-  width: 100vw;
 }
 
-.historia-sobre {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 18px;
-}
+/* FOOTER */
 
 .rodape {
   background-color: #f5ecda;
   color: #5f0214;
-  width: 100vw;
 }
 
 .colunas {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .coluna {
@@ -214,53 +214,70 @@ img {
   flex-direction: column;
 }
 
-.titulo {
-  margin: 100px 0px 0px 0px;
+.titulo{
+  margin: 50px 0px 0px 0px;
 }
 
 .distancia {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 150px;
 }
 
 .final {
   font-size: 20px;
+  font-family: "DM Sans", sans-serif;
 }
 
 .fim {
   display: flex;
+  justify-content: center;
   background-color: #5f0214;
   color: yellow;
+  font-family: "DM Sans", sans-serif;
 }
+
+
+/* FEEDBACK */
 
 .avaliacao {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  margin-top: 200px;
+}
+
+.pulo {
+  margin-top: 200px; 
+}
+
+.pulo2 {
+  margin-bottom: 100px;
 }
 
 .avaliacao1 {
   height: 150px;
   width: 700px;
   display: flexbox;
-  margin: 0px 50px;
+  margin: 20px 50px;
   border: black 3px solid;
   border-radius: 10px;
+  font-family: "DM Sans", sans-serif;
+  background-color: grey;
 }
 
 .avaliacao2 {
+  font-family: "DM Sans", sans-serif;
   height: 150px;
   width: 700px;
   display: flexbox;
-  flex-direction: column;
+  margin: 20px 50px;   
   border: black 3px solid;
   border-radius: 10px;
+  background-color: grey;
 }
 
-.perfil {
-  width: 3vw;
-  margin: 25px 25px;
+.pessoa {
+  color: #ffde59;
+  font-size: 20px;
 }
+
 
 .estrela {
   width: 4vw;
