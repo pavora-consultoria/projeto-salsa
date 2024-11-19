@@ -169,12 +169,6 @@ img {
   margin-bottom: 46px;
 }
 
-.sobre-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 400px;
-}
 
 /* SOBRE NÓS */
 
@@ -182,18 +176,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 400px;
+  margin-top: 100px;
 }
 
 .sobre {
   height: 100vh;
   font-size: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 
 .sobre-img > img {
   width: 900px;
-  margin-top: 100px;
 }
 
 .sobre-img {
@@ -247,11 +240,11 @@ img {
 }
 
 .pulo {
-  margin-top: 200px; 
+  margin-top: 100px; 
 }
 
 .pulo2 {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .avaliacao1 {
