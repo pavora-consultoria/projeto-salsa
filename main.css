@@ -9,15 +9,24 @@ body {
   user-select: none;
 }
 
+[vw] {
+  height: 75vh;
+}
+
+[vw-access-button] {
+  bottom: 40px;
+  right: 40px;
+}
+
 header > .navbar {
   width: 100vw;
-  background-color: #5f0214;
+  background-color: #890019;
   position: fixed;
   z-index: 2;
 }
 
 img {
-  width: 140px;
+  width: 160px;
 }
 
 .nav-item > a {
@@ -29,7 +38,7 @@ img {
 
 .nav-item > a:hover {
   text-decoration: underline;
-  color: #fde99a;
+  color: #8a0721;
   transition: 1s ease;
   font-weight: bold;
 }
@@ -108,7 +117,7 @@ img {
 }
 
 .carousel-item {
-  height: 60vh;
+  height: 70vh;
 }
 
 .carousel-item > img {
@@ -122,11 +131,16 @@ img {
 }
 
 .pratos-home {
-  padding-top: 80px;
+  margin-top: 20px;
+  margin-bottom: 200px;
 }
 
 .pratos-titulo {
+  padding-top: 50px;
   margin-bottom: 50px;
+  font-family: "DM Sans", sans-serif;
+  color: #8a0721;
+  text-transform: uppercase;
 }
 
 .home-container {
@@ -136,8 +150,23 @@ img {
   justify-content: center;
 }
 
+div > .card {
+  background-color: #ffde59a2;
+}
+
+div > .card > h3 {
+  margin-top: 20px;
+  color: #5e0214;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+div > h6 {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
 .card {
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 250px;
@@ -161,14 +190,13 @@ img {
 }
 
 #icon-whatssap {
-  right: 20px;
+  right: 10px;
   position: fixed;
   cursor: pointer;
   z-index: 10;
   bottom: 0;
-  margin-bottom: 46px;
+  margin-bottom: 26px;
 }
-
 
 /* SOBRE NÓS */
 
@@ -176,13 +204,18 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 500px;
+  background-color: #5e0214;
 }
 
 .sobre {
   height: 100vh;
   font-size: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
+  color: #ffde59;
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .sobre-img > img {
@@ -198,7 +231,7 @@ img {
 
 .rodape {
   background-color: #f5ecda;
-  color: #5f0214;
+  color: #890019;
 }
 
 .colunas {
@@ -210,7 +243,7 @@ img {
   flex-direction: column;
 }
 
-.titulo{
+.titulo {
   margin: 50px 0px 0px 0px;
 }
 
@@ -231,7 +264,6 @@ img {
   font-family: "DM Sans", sans-serif;
 }
 
-
 /* FEEDBACK */
 
 .avaliacao {
@@ -240,7 +272,7 @@ img {
 }
 
 .pulo {
-  margin-top: 100px; 
+  margin-top: 100px;
 }
 
 .pulo2 {
@@ -263,7 +295,7 @@ img {
   height: 150px;
   width: 700px;
   display: flexbox;
-  margin: 20px 50px;   
+  margin: 20px 50px;
   border: black 3px solid;
   border-radius: 10px;
   background-color: grey;
@@ -273,7 +305,6 @@ img {
   color: #ffde59;
   font-size: 20px;
 }
-
 
 .estrela {
   width: 4vw;
@@ -365,9 +396,8 @@ img {
 }
 
 .option {
- 
   background-color: rgba(0, 0, 0, 0.6);
-margin-bottom: 25vmax;
+  margin-bottom: 25vmax;
   background-size: cover;
   background-position: center;
   width: 20vmax;
@@ -389,15 +419,15 @@ margin-bottom: 25vmax;
 @media (max-width: 768px) {
   .option {
     width: 90%;
-    height: 70%; 
-    height: auto; 
+    height: 70%;
+    height: auto;
     padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .option {
-    width: 100%; 
+    width: 100%;
     height: 70%;
     padding: 15px;
   }

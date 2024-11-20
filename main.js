@@ -82,23 +82,29 @@ Por favor, verifique o número de telefone e tente novamente.</p>
 
 const produtos = [
   {
-    imagem: "https://ik.imagekit.io/mnz3yzqzot/25.png?updatedAt=1731556741235",
+    imagem: "https://ik.imagekit.io/mnz3yzqzot/19.png?updatedAt=1732053587969",
+    titulo: "Segunda-Feira",
+    descricao: "Virado à Paulista",
   },
   {
-    imagem:
-      "https://ik.imagekit.io/mnz3yzqzot/Yellow%20and%20Pink%20Modern%20Simple%20Restaurant%20Landing%20Page%20Website%20UI%20Prototype%20(3).png?updatedAt=1731563231277",
+    imagem: "https://ik.imagekit.io/mnz3yzqzot/18.png?updatedAt=1732053586548",
+    titulo: "Terça-Feira",
+    descricao: "Filé de Frango ao Creme de Milho",
   },
   {
-    imagem: "https://ik.imagekit.io/mnz3yzqzot/24.png?updatedAt=1731556741308",
+    imagem: "https://ik.imagekit.io/mnz3yzqzot/21.png?updatedAt=1732053586654",
+    titulo: "Quarta-Feira",
+    descricao: "Feijoada",
   },
   {
-    imagem: "https://ik.imagekit.io/mnz3yzqzot/26.png?updatedAt=1731556740990",
+    imagem: "https://ik.imagekit.io/mnz3yzqzot/20.png?updatedAt=1732053586285",
+    titulo: "Quinta-Feira",
+    descricao: "Bife à Rolê",
   },
   {
-    imagem: "https://ik.imagekit.io/mnz3yzqzot/26.png?updatedAt=1731556740990",
-  },
-  {
-    imagem: "https://ik.imagekit.io/mnz3yzqzot/26.png?updatedAt=1731556740990",
+    imagem: "https://ik.imagekit.io/mnz3yzqzot/23.png?updatedAt=1732053587748",
+    titulo: "Sexta-Feira",
+    descricao: "Panqueca",
   },
 ];
 
@@ -111,6 +117,8 @@ function gerarCards() {
 
     card.innerHTML = `
             <img src="${produto.imagem}" alt="Prato do dia">
+            <h3>${produto.titulo}</h3>
+            <h6>${produto.descricao}</h6>
         `;
 
     container.appendChild(card);
