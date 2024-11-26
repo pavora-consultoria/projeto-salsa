@@ -446,6 +446,39 @@ div > h6 {
 
 /* Formulário "Fale Comigo" */
 
+.formes {
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  text-align: center;
+}
+
+.formulario {
+  border: solid 3px black;
+  margin: 20px auto;
+  background-color:#f5ecda ;
+  border-radius: 2rem;
+}
+
+.ficha {
+  border: solid 3px #ffde59 ;
+  background-color: #5e0214;
+  border-radius: 10%;
+  height: 5vh;
+  width: 10vw;
+}
+
+.descricao {
+  color:#5e0214 ;
+  font-family: "DM Sans", sans-serif;
+}
+
+.enviar {
+  color:#ffde59 ;
+}
+
 /* cards -samuel */
 
 .menu-options {
