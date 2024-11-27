@@ -149,3 +149,50 @@ function fecharMenuHamburguer() {
 
 menuHamburguer();
 document.addEventListener("DOMContentLoaded", gerarCards);
+
+
+// sam
+
+let selectedRating = 0;
+
+document.querySelectorAll('.star').forEach(star => {
+  star.addEventListener('click', function () {
+    // Remove a classe "active" de todas as estrelas
+    document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+
+    // Adiciona a classe "active" nas estrelas até a selecionada
+    this.classList.add('active');
+    selectedRating = this.dataset.value;
+
+    for (let i = 1; i < this.dataset.value; i++) {
+      document.querySelector(`.star[data-value="${i}"]`).classList.add('active');
+    }
+  });
+});
+
+document.getElementById('commentForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Impede o envio do formulário
+
+  const commentInput = document.getElementById('commentInput');
+  const commentList = document.getElementById('commentList');
+
+  if (commentInput.value.trim() !== '' && selectedRating > 0) {
+    // Cria um novo item de lista para o comentário
+    const newComment = document.createElement('li');
+    newComment.innerHTML = `
+      <div class="rating-display">Avaliação: ${'★'.repeat(selectedRating)}${'☆'.repeat(5 - selectedRating)}</div>
+      <p>${commentInput.value}</p>
+    `;
+
+    // Adiciona o comentário à lista
+    commentList.appendChild(newComment);
+
+    // Limpa o campo de entrada e o rating
+    commentInput.value = '';
+    document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+    selectedRating = 0;
+  } else {
+    alert('Por favor, insira um comentário e uma avaliação!');
+  }
+});
+
