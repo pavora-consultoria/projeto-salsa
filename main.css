@@ -444,7 +444,7 @@ div > h6 {
   }
 }
 
-/* Formulário "Fale Comigo"
+/* Formulário "Fale Comigo" */
 
 .formes {
   text-align: center;
@@ -477,9 +477,7 @@ form {
 
 .enviar {
   color:#ffde59 ;
-} */
-
-/* Estrelas */
+}
 
 /* cards -samuel */
 
@@ -550,7 +548,7 @@ form {
 
 @media (max-width: 480px) {
   .option {
-    width: 80%;
+    width: 0%;
     height: 70%;
     padding:5rem;
   }
