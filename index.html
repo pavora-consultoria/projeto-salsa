@@ -1,385 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://ik.imagekit.io/mnz3yzqzot/Logo_cozinha_caseira_amarelo__2_-removebg-preview.png?updatedAt=1732047302574"
-      type="image/png"
-      alt="Icon Restaurante Salsa"
-    />
-    <title>Restaurante, Lanchonete e Pizzaria</title>
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg d-flex justify-content-between">
-        <div class="container-fluid">
-          <div class="logo-nav">
-            <a class="navbar-brand" href="#">
-              <img
-                src="https://ik.imagekit.io/mnz3yzqzot/2-removebg-preview.png?updatedAt=1732049720856"
-                alt="Logo restaurante salsa."
-              />
-            </a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="https://ik.imagekit.io/mnz3yzqzot/Logo_cozinha_caseira_amarelo__2_-removebg-preview.png?updatedAt=1732047302574"
+    type="image/png" alt="Icon Restaurante Salsa" />
+  <title>Restaurante, Lanchonete e Pizzaria</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+</head>
 
-          <ul class="navbar-nav" id="navbar">
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#">Início</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item px-3">
-              <a
-                class="nav-link"
-                href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
-                class="cardapio"
-                target="_blank"
-                >Cardápio</a
-              >
-            </li>
-            <li
-              class="nav-item px-3"
-              data-bs-toggle="modal"
-              data-bs-target="#modal"
-            >
-              <a class="nav-link" id="reserva" href="#">Reserva</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#">Contato</a>
-            </li>
-          </ul>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+      <div class="container-fluid">
+        <div class="logo-nav">
+          <a class="navbar-brand" href="#">
+            <img src="https://ik.imagekit.io/mnz3yzqzot/2-removebg-preview.png?updatedAt=1732049720856"
+              alt="Logo restaurante salsa." />
+          </a>
+        </div>
 
-          <div class="menu-hamburguer">
-            <img id="hamburguer-img" src="images/hamburger.png" alt="menu" />
+        <ul class="navbar-nav" id="navbar">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
+              class="cardapio" target="_blank">Cardápio</a>
+          </li>
+          <li class="nav-item px-3" data-bs-toggle="modal" data-bs-target="#modal">
+            <a class="nav-link" id="reserva" href="#">Reserva</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+        </ul>
 
-            <div id="menu-conteudo">
-              <div class="logo-menu-hamburger">
-                <a class="navbar-brand" href="#">
-                  <img
-                    src="https://ik.imagekit.io/mnz3yzqzot/2-removebg-preview.png?updatedAt=1732049720856"
-                    alt="Logo restaurante salsa."
-                  />
-                </a>
-                <div class="close" onclick="fecharMenuHamburguer()">
-                  <img id="close-img" src="images/close.png" alt="" />
-                </div>
+        <div class="menu-hamburguer">
+          <img id="hamburguer-img" src="images/hamburger.png" alt="menu" />
+
+          <div id="menu-conteudo">
+            <div class="logo-menu-hamburger">
+              <a class="navbar-brand" href="#">
+                <img src="https://ik.imagekit.io/mnz3yzqzot/2-removebg-preview.png?updatedAt=1732049720856"
+                  alt="Logo restaurante salsa." />
+              </a>
+              <div class="close" onclick="fecharMenuHamburguer()">
+                <img id="close-img" src="images/close.png" alt="" />
               </div>
+            </div>
 
-              <div class="li-itens">
-                <div class="li-item" onclick="fecharMenuHamburguer()">
-                  <a class="nav-link" href="#">Início</a>
-                </div>
-                <div class="li-item" onclick="fecharMenuHamburguer()">
-                  <a class="nav-link" href="#sobre">Sobre</a>
-                </div>
-                <div class="li-item" onclick="fecharMenuHamburguer()">
-                  <a
-                    class="nav-link"
-                    href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
-                    class="cardapio"
-                    target="_blank"
-                    >Cardápio</a
-                  >
-                </div>
-                <div
-                  class="li-item"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modal"
-                  onclick="fecharMenuHamburguer()"
-                >
-                  <a class="nav-link" href="#">Reserva</a>
-                </div>
-                <div class="li-item" onclick="fecharMenuHamburguer()">
-                  <a class="nav-link" href="#">Contato</a>
-                </div>
+            <div class="li-itens">
+              <div class="li-item" onclick="fecharMenuHamburguer()">
+                <a class="nav-link" href="#">Início</a>
+              </div>
+              <div class="li-item" onclick="fecharMenuHamburguer()">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </div>
+              <div class="li-item" onclick="fecharMenuHamburguer()">
+                <a class="nav-link" href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
+                  class="cardapio" target="_blank">Cardápio</a>
+              </div>
+              <div class="li-item" data-bs-toggle="modal" data-bs-target="#modal" onclick="fecharMenuHamburguer()">
+                <a class="nav-link" href="#">Reserva</a>
+              </div>
+              <div class="li-item" onclick="fecharMenuHamburguer()">
+                <a class="nav-link" href="#">Contato</a>
               </div>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <div id="icon-whatssap">
-      <a
-        href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora"
-        target="_blank"
-      >
-        <img
-          src="https://ik.imagekit.io/mnz3yzqzot/whatsapp.png?updatedAt=1732410725195"
-          alt="ícone whatssap."
-        />
-      </a>
-    </div>
+  <div id="icon-whatssap">
+    <a href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora"
+      target="_blank">
+      <img src="https://ik.imagekit.io/mnz3yzqzot/whatsapp.png?updatedAt=1732410725195" alt="ícone whatssap." />
+    </a>
+  </div>
 
-    <div class="modal" id="modal" data-bs-backdrop="static">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title">Faça sua Reserva!</h5>
+  <div class="modal" id="modal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Faça sua Reserva!</h5>
         </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" class="form-control" required id="nome" />
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome:</label>
+              <input type="text" class="form-control" required id="nome" />
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">Celular:</label>
+              <input type="tel" class="form-control" required id="telefone" placeholder="(00) 00000-0000"
+                pattern="^\(\d{2}\) \d{5}-\d{4}$" />
+            </div>
+            <div class="mb-3">
+              <label for="quantidade" class="form-label">Número de pessoas:</label>
+              <input type="number" class="form-control" required id="quantidade" max="6" min="1" value="1" />
+            </div>
+            <div class="mb-3">
+              <label for="data" class="form-label">Data da Reserva:</label>
+              <div class="d-flex">
+                <input type="date" class="form-control me-2" required id="data" />
+                <select id="horarios" required name="horarios" class="form-select">
+                  <option value="" disabled selected>
+                    Selecione o horário
+                  </option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00</option>
+                  <option value="22:00">22:00</option>
+                  <option value="23:00">23:00</option>
+                </select>
               </div>
-              <div class="mb-3">
-                <label for="telefone" class="form-label">Celular:</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  required
-                  id="telefone"
-                  placeholder="(00) 00000-0000"
-                  pattern="^\(\d{2}\) \d{5}-\d{4}$"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="quantidade" class="form-label"
-                  >Número de pessoas:</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  required
-                  id="quantidade"
-                  max="6"
-                  min="1"
-                  value="1"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="data" class="form-label">Data da Reserva:</label>
-                <div class="d-flex">
-                  <input
-                    type="date"
-                    class="form-control me-2"
-                    required
-                    id="data"
-                  />
-                  <select
-                    id="horarios"
-                    required
-                    name="horarios"
-                    class="form-select"
-                  >
-                    <option value="" disabled selected>
-                      Selecione o horário
-                    </option>
-                    <option value="11:00">11:00</option>
-                    <option value="12:00">12:00</option>
-                    <option value="13:00">13:00</option>
-                    <option value="14:00">14:00</option>
-                    <option value="15:00">15:00</option>
-                    <option value="16:00">16:00</option>
-                    <option value="17:00">17:00</option>
-                    <option value="18:00">18:00</option>
-                    <option value="19:00">19:00</option>
-                    <option value="20:00">20:00</option>
-                    <option value="21:00">21:00</option>
-                    <option value="22:00">22:00</option>
-                    <option value="23:00">23:00</option>
-                  </select>
-                </div>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
+        </div>
 
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Cancelar
-            </button>
-            <button
-              type="submit"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-              onclick="enviarSMS()"
-            >
-              Confirmar
-            </button>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-success" data-bs-dismiss="modal" onclick="enviarSMS()">
+            Confirmar
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <main>
-      <div class="home">
-        <section>
-          <div
-            id="carousel-exemplo"
-            class="carousel carousel-fade"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="2000">
-                <img
-                  class="d-block w-100"
-                  src="https://ik.imagekit.io/mnz3yzqzot/1.png?updatedAt=1732050352894"
-                  alt=""
-                />
-              </div>
-
-              <div class="carousel-item" data-bs-interval="2000">
-                <img
-                  class="d-block w-100"
-                  src="https://ik.imagekit.io/mnz3yzqzot/2.png?updatedAt=1732049811519"
-                  alt=""
-                />
-              </div>
-
-              <div class="carousel-item" data-bs-interval="2000">
-                <img
-                  class="d-block w-100"
-                  src="https://ik.imagekit.io/mnz3yzqzot/3.png?updatedAt=1732048523814"
-                  alt=""
-                />
-              </div>
-
-              <div class="carousel-item" data-bs-interval="2000">
-                <img
-                  class="d-block w-100"
-                  src="https://ik.imagekit.io/mnz3yzqzot/4.png?updatedAt=1732050353073"
-                  alt="."
-                />
-              </div>
+  <main>
+    <div class="home">
+      <section>
+        <div id="carousel-exemplo" class="carousel carousel-fade" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/1.png?updatedAt=1732050352894" alt="" />
             </div>
 
-            <button
-              data-bs-target="#carousel-exemplo"
-              data-bs-slide="prev"
-              class="carousel-control-prev"
-              type="button"
-            >
-              <span class="carousel-control-prev-icon"></span>
-            </button>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/2.png?updatedAt=1732049811519" alt="" />
+            </div>
 
-            <button
-              data-bs-target="#carousel-exemplo"
-              data-bs-slide="next"
-              class="carousel-control-next"
-              type="button"
-            >
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/3.png?updatedAt=1732048523814" alt="" />
+            </div>
 
-          <div class="body-pratos">
-            <div class="pratos-home">
-              <h1 class="pratos-titulo text-center">Pratos do dia</h1>
-              <div id="cards-container" class="home-container"></div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img class="d-block w-100" src="https://ik.imagekit.io/mnz3yzqzot/4.png?updatedAt=1732050353073"
+                alt="." />
             </div>
           </div>
 
-        </section>
-      </div>
+          <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
 
-      <div class="sobre-container" id="sobre">
-        <section class="sobre">
-          <div class="sobre-img">
-            <img
-              src="https://ik.imagekit.io/mnz3yzqzot/img-sobre.png?updatedAt=1731558803741"
-              alt="Imagens da logo e pratos"
-            />
+          <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <div class="body-pratos">
+          <div class="pratos-home">
+            <h1 class="pratos-titulo text-center">Pratos do dia</h1>
+            <div id="cards-container" class="home-container"></div>
           </div>
+        </div>
 
-          <div class="historia-sobre">
-            <p>
-              Depois de trabalharem em restaurantes no centro de São Paulo, em
-              1984, Salsa e sua esposa, D.Lúcia, entram de sociedade com um
-              amigo, o Nelson, em um bar de bilhar que ficou conhecido como
-              Sa-Nel situado na Vila Medeiros, onde é o Restaurante Salsa até os
-              dias de hoje. O Bar e Bilhar possuía somente bebidas, salgados e
-              petiscos, porém a procura por uma comida mais caseira aumentava a
-              cada dia, com isso D. Lúcia começou a cozinhar atendendo a pedidos
-              dos clientes, começou então a ser vendido o simples e tradicional
-              comercial e no ano de 1994, Salsa e D. Lúcia decidem fazer uma
-              reforma na casa, e transformarem o Bar e Bilhar em um Restaurante.
-              Desde sua inauguração em 27 de março de 1994, o Restaurante Salsa
-              vem crescendo a cada ano com o crescimento do Restaurante Salsa,
-              atualmente Salsa e D. Lúcia contam com a ajuda de suas filhas, de
-              um dos irmãos do Salsa, e com mais 50 funcionários para manter o
-              sucesso e crescimento da casa.
-            </p>
-          </div>
-        </section>
-      </div>
+      </section>
+    </div>
 
-      <div class="rhr">
-        <section class="menu-options">
-          <div class="option" onclick="navigate('menu')">
-            <h2 class="rsm">VEJA O CARDÁPIO</h2>
-            <button class="btn1">
-              <a
-                href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
-                class="lit"
-                target="_blank"
-                >Clique aqui</a
-              >
+    <div class="sobre-container" id="sobre">
+      <section class="sobre">
+        <div class="sobre-img">
+          <img src="https://ik.imagekit.io/mnz3yzqzot/img-sobre.png?updatedAt=1731558803741"
+            alt="Imagens da logo e pratos" />
+        </div>
+
+        <div class="historia-sobre">
+          <p>
+            Depois de trabalharem em restaurantes no centro de São Paulo, em
+            1984, Salsa e sua esposa, D.Lúcia, entram de sociedade com um
+            amigo, o Nelson, em um bar de bilhar que ficou conhecido como
+            Sa-Nel situado na Vila Medeiros, onde é o Restaurante Salsa até os
+            dias de hoje. O Bar e Bilhar possuía somente bebidas, salgados e
+            petiscos, porém a procura por uma comida mais caseira aumentava a
+            cada dia, com isso D. Lúcia começou a cozinhar atendendo a pedidos
+            dos clientes, começou então a ser vendido o simples e tradicional
+            comercial e no ano de 1994, Salsa e D. Lúcia decidem fazer uma
+            reforma na casa, e transformarem o Bar e Bilhar em um Restaurante.
+            Desde sua inauguração em 27 de março de 1994, o Restaurante Salsa
+            vem crescendo a cada ano com o crescimento do Restaurante Salsa,
+            atualmente Salsa e D. Lúcia contam com a ajuda de suas filhas, de
+            um dos irmãos do Salsa, e com mais 50 funcionários para manter o
+            sucesso e crescimento da casa.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="rhr">
+      <section class="menu-options">
+        <div class="option" onclick="navigate('menu')">
+          <h2 class="rsm">VEJA O CARDÁPIO</h2>
+          <button class="btn1">
+            <a href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf" class="lit"
+              target="_blank">Clique aqui</a>
+          </button>
+        </div>
+        <div class="option" onclick="navigate('reserve')">
+          <h2 class="rsm"">RESERVE SUA MESA</h2>
+            <button class=" btn2">
+            <a class="lit"
+              href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora"
+              target="_blank">Clique aqui</a>
             </button>
-          </div>
-          <div class="option" onclick="navigate('reserve')">
-            <h2 class="rsm"">RESERVE SUA MESA</h2>
-            <button class="btn2">
-              <a class="lit"
-                href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20%0A%0ASeja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%0A%0AAtenciosamente,%20Pavora"
-                target="_blank"
-                >Clique aqui</a
-              >
-            </button>
-          </div>
-          <div class="option" onclick="navigate('contact')">
-            <h2 class="rsm">FALE CONOSCO</h2>
-            <button class="btn3"><a class="lit" href="">Clique aqui</a></button>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div class="option" onclick="navigate('contact')">
+          <h2 class="rsm">FALE CONOSCO</h2>
+          <button class="btn3"><a class="lit" href="">Clique aqui</a></button>
+        </div>
+      </section>
+    </div>
 
-      <section class="formes" >
+    <section class="formes">
 
-        <form action="#" id="fale">
-        
-          <h2 id="formularioFale">Fale Conosco</h2>
+      <form action="#" id="fale">
 
-          <label for="cNome" class="descricao">Nome</label>
-          <input type="text" id="cNome" class="ficha ficha2">
+        <h2 id="formularioFale">Fale Conosco</h2>
+
+        <label for="cNome" class="descricao">Nome</label>
+        <input type="text" id="cNome" class="ficha ficha2">
 
 
 
-          <label for="cSobrenome" class="descricao espaco2">Sobrenome</label>
-          <input type="text" id="cSobrenome" class="ficha ficha2">
+        <label for="cSobrenome" class="descricao espaco2">Sobrenome</label>
+        <input type="text" id="cSobrenome" class="ficha ficha2">
 
-          <br><br>
+        <br><br>
 
-          <label for="ctelefone" class="descricao">Número</label>
-          <input type="tel" id="ctelefone" class="ficha ficha2 espaco3">
+        <label for="ctelefone" class="descricao">Número</label>
+        <input type="tel" id="ctelefone" class="ficha ficha2 espaco3">
 
-          <label for="cEmail" class="descricao espaco2">E-mail</label>
-          <input type="email" id="cEmail" class="ficha ficha2">
+        <label for="cEmail" class="descricao espaco2">E-mail</label>
+        <input type="email" id="cEmail" class="ficha ficha2">
 
-          <br><br>
+        <br><br>
 
-          <h4 class="descricao">Comentário</h4>
-          <br><br>
-          <textarea id="cDuvida" <textarea rows="5" cols="40" class="ficha "></textarea>
-          
-          <br><br>
-          
-          <!-- Estrelhas -->
-          <div class="rating">
+        <h4 class="descricao">Comentário</h4>
+        <br><br>
+        <textarea id="cDuvida" <textarea rows="5" cols="40" class="ficha "></textarea>
+
+        <br><br>
+
+        <!-- Estrelhas -->
+        <div class="rating">
             <input value="1" name="rate" id="star1" type="radio">
             <label title="text" for="star1"></label>
 
@@ -396,178 +290,155 @@
             <label title="text" for="star5"></label>
           </div>
 
+        <br><br>
 
-          <br><br>
+        <input type="submit" value="Enviar" class="ficha enviar ficha2">
+      </form>
+    </section>
 
-          <input type="submit" value="Enviar" class="ficha enviar ficha2">
-        </form>
-      </section>
+    <section>
 
-      <section>
 
-       
- 
 
-        <div class="feedback">
-            <div class="avaliacao1">
-            <p class="pessoa">Ermerson Laspa</p>
-            <img
-              src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-              alt="Avaliação cinco estrelas"
-              class="estrela"
-            />
-            <p>
-              Esse restaurante é incrivel! Gostei muito dos prantos,
-              principalmente da feijoada 😋, sem falar do ambiente extremamente
-              confortável
-            </p>
-          </div>
 
-          <div class="avaliacao2">
-            <p class="pessoa">José Silva</p>
-
-            <img
-              src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-              alt="Avaliação cinco estrelas"
-              class="estrela"
-            />
-            <p>
-              Amei demais a decoração do lugar e do atendimento aos clientes,
-              voltarei mais vezes nesse lugar
-            </p>
-          </div>
-          
-
-            <div class="avaliacao3">
-            <p class="pessoa">Thiaguinho Silva</p>
-
-            <img
-              src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-              alt="Avaliação cinco estrelas"
-              class="estrela"
-            />
-            <p>
-              Muito bom! a partir de hoje vocês ganharam um cliente vitalício,
-              com certeza irei indicar pros meus amigos
-            </p>
-          </div>
-
-          <div class="avaliacao4">
-            <p class="pessoa">Eduardo Madeira</p>
-
-            <img
-              src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-              alt="Avaliação cinco estrelas"
-              class="estrela"
-            />
-            <p>
-              A comida é muito bem temperada, principalmente a virada à paulista,
-              comeria 10 vezes sem dúvidas😂😁
-            </p>
-          </div>
-          
-
+      <div class="feedback">
+        <div class="avaliacao1">
+          <p class="pessoa">Ermerson Laspa</p>
+          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
+            alt="Avaliação cinco estrelas" class="estrela" />
+          <p>
+            Esse restaurante é incrivel! Gostei muito dos prantos,
+            principalmente da feijoada 😋, sem falar do ambiente extremamente
+            confortável
+          </p>
         </div>
 
-      </section>
+        <div class="avaliacao2">
+          <p class="pessoa">José Silva</p>
 
-      <footer class="rodape">
-        <div class="colunas">
-          <div class="coluna">
-            <h4>Informações de Contato</h4>
+          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
+            alt="Avaliação cinco estrelas" class="estrela" />
+          <p>
+            Amei demais a decoração do lugar e do atendimento aos clientes,
+            voltarei mais vezes nesse lugar
+          </p>
+        </div>
 
-            <div class="detalhes-rodape">
-              <p class="final">(11) 2989-4316</p>
-              <p class="final">(11) 2983-0025</p>
-            </div>
 
-            <div class="titulo-final">
-              <p>Av. Nossa Senhora de Loreto, 1050</p>
-              <p>Vila Medeiros - Zona Norte - SP</p>
-            </div>
+        <div class="avaliacao3">
+          <p class="pessoa">Thiaguinho Silva</p>
+
+          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
+            alt="Avaliação cinco estrelas" class="estrela" />
+          <p>
+            Muito bom! a partir de hoje vocês ganharam um cliente vitalício,
+            com certeza irei indicar pros meus amigos
+          </p>
+        </div>
+
+        <div class="avaliacao4">
+          <p class="pessoa">Eduardo Madeira</p>
+
+          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
+            alt="Avaliação cinco estrelas" class="estrela" />
+          <p>
+            A comida é muito bem temperada, principalmente a virada à paulista,
+            comeria 10 vezes sem dúvidas😂😁
+          </p>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <footer class="rodape">
+      <div class="colunas">
+        <div class="coluna">
+          <h4>Informações de Contato</h4>
+
+          <div class="detalhes-rodape">
+            <p class="final">(11) 2989-4316</p>
+            <p class="final">(11) 2983-0025</p>
           </div>
 
-          <div class="coluna">
-            <h4>Atendimento</h4>
+          <div class="titulo-final">
+            <p>Av. Nossa Senhora de Loreto, 1050</p>
+            <p>Vila Medeiros - Zona Norte - SP</p>
+          </div>
+        </div>
 
-            <div class="detalhes-rodape">
-              <p class="final">Segundas a Sábado</p>
-              <p class="final">11:00h às 23:00h</p>
-            </div>
+        <div class="coluna">
+          <h4>Atendimento</h4>
 
-            <h4 class="final">e-mail</h4>
-            <p>sanel@uol.com</p>
+          <div class="detalhes-rodape">
+            <p class="final">Segundas a Sábado</p>
+            <p class="final">11:00h às 23:00h</p>
           </div>
 
-          <div class="coluna">
-            <h4>Localização</h3>
+          <h4 class="final">e-mail</h4>
+          <p>sanel@uol.com</p>
+        </div>
+
+        <div class="coluna">
+          <h4>Localização</h3>
 
             <div class="mapa-rodape">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2625797444416!2d-46.58454892376206!3d-23.487049858868158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5f0cda677cb%3A0x8a496539554a2e35!2sRestaurante%20Salsa!5e0!3m2!1sen!2sbr!4v1731439559265!5m2!1sen!2sbr"
-                width="350"
-                height="200"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="mapa"
-              ></iframe>
+                width="350" height="200" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
             </div>
-          </div>
         </div>
-
-        <div class="info-rodape">
-          <div class="info-texto">
-            <h6>Se beber, não diriga.</h6>
-            <p>Venda e consumo proibido para menores de 18 anos</p>
-          </div>
-        </div>
-
-        <small>
-          <div class="small-box">
-
-            <div class="small-direitos">
-              <p>Todos os direitos reservados</p>
-            </div>
-          
-            <div class="small-copy">
-              <p>&copy; Copyright 2024</p>
-            </div>
-
-            <div class="small-img">
-              Desenvolvido por:
-              <a
-              href="https://linktr.ee/pavoraconsultoria?utm_source=linktree_admin_share"
-              target="_blank"
-              >
-              <img
-              src="https://ik.imagekit.io/mnz3yzqzot/PAVORA%20(4).png?updatedAt=1732412874465"
-              alt="Logo consultoria pavora"
-              />
-              </a>
-            </div>
-
-          </div>
-        </small>
-
-      </footer>
-
-    </main>
-
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
       </div>
+
+      <div class="info-rodape">
+        <div class="info-texto">
+          <h6>Se beber, não diriga.</h6>
+          <p>Venda e consumo proibido para menores de 18 anos</p>
+        </div>
+      </div>
+
+      <small>
+        <div class="small-box">
+
+          <div class="small-direitos">
+            <p>Todos os direitos reservados</p>
+          </div>
+
+          <div class="small-copy">
+            <p>&copy; Copyright 2024</p>
+          </div>
+
+          <div class="small-img">
+            Desenvolvido por:
+            <a href="https://linktr.ee/pavoraconsultoria?utm_source=linktree_admin_share" target="_blank">
+              <img src="https://ik.imagekit.io/mnz3yzqzot/PAVORA%20(4).png?updatedAt=1732412874465"
+                alt="Logo consultoria pavora" />
+            </a>
+          </div>
+
+        </div>
+      </small>
+
+    </footer>
+
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
+
 </html>
