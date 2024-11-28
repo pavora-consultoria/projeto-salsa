@@ -502,13 +502,19 @@ form {
 /* Estrelas */
 
 
+.rating {
+  justify-content: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .rating:not(:checked) > input {
   position: absolute;
   appearance: none;
 }
 
 .rating:not(:checked) > label {
-  float: inherit;
+  flex-direction: row-reverse;
   cursor: pointer;
   font-size: 3rem;
   color: #666;
