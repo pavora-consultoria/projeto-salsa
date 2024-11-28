@@ -448,35 +448,55 @@ div > h6 {
 
 .formes {
   text-align: center;
+  font-family: "DM Sans", sans-serif;
 }
 
 form {
-  width: 50%;
+  width: 45rem;
   text-align: center;
 }
 
+#formularioFale {
+  color: #ffde59;
+}
+
 #fale {
-  border: solid 3px black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
   margin: 20px auto;
-  background-color:#f5ecda ;
+  background-color: #5e0214;
   border-radius: 2rem;
 }
 
 .ficha {
   border: solid 3px #ffde59 ;
-  background-color: #5e0214;
+  background-color: #f5ecda;
   border-radius: 10%;
+
+}
+
+.ficha2 {
   height: 5vh;
   width: 10vw;
 }
 
+.espaco2 {
+  margin-left: 1rem;
+}
+
+.espaco3 {
+  margin-right: 2.8rem;
+}
+
+
 .descricao {
-  color:#5e0214 ;
+
+  color:#ffde59 ;
   font-family: "DM Sans", sans-serif;
 }
 
 .enviar {
-  color:#ffde59 ;
+  margin-bottom: 1rem;
+  color:#5e0214 ;
 }
 
 /* Estrelas */
