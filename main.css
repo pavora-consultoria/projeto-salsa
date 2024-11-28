@@ -538,7 +538,7 @@ label {
 }
 
 .option {
- /* background-image: url(./images/background-cards.jpg); */
+
  
  background-color:rgba(0, 0, 0, 0.5);
   margin-bottom: 25vmax;
@@ -627,5 +627,35 @@ label {
   display: flex;
 }
 
+/* /////////////////////////////////////////////////////////////////////////// */
 
+.feliz {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colunas */
+
+ height: 20rem;
+  gap: 10px; /* Espaço entre as divs */
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+
+}
+
+.fof {
+  
+  justify-content: center;
+  align-items: center;
+display: flex;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+ background-size: cover;
+background-position: center;
+
+}
 
