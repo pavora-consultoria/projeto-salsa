@@ -511,6 +511,7 @@ form {
   justify-content: center;
   align-items: center;
   color: #ffde59;
+  border: solid 0.2rem #ffde59;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-family: "DM Sans", sans-serif;
