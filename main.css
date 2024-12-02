@@ -447,6 +447,7 @@ div > h6 {
 /* Formulário "Fale Comigo" */
 
 .formes {
+  height: 70%;
   text-align: center;
   font-family: "DM Sans", sans-serif;
   background-image: url(./images/background-contato.jpg);
@@ -456,30 +457,30 @@ div > h6 {
 }
 
 form {
-  width: 45rem; /* Estava 45*/
+  width: 45rem;
   text-align: center;
 }
 
 #formularioFale {
-  color: #ffde59;
+  color:#5e0214 ;
+  font-weight: bold;
 }
 
 #fale {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
-  margin: 20px auto;
-  background-color: #5e0214;
+  margin: 0px auto;
+  background-color: #ffffff62;
   border-radius: 2rem;
-
 }
 
 .ficha {
-  border: solid 3px #ffde59 ;
-  background-color: #f5ecda;
-  border-radius: 10%;
-
+  background-color: #20232d;
+  border-radius: 5%;
 }
 
 .ficha2 {
+  background-color: #20232d;
+  border-radius: 20%;
   height: 5vh;
   width: 20vw;
 }
@@ -488,9 +489,9 @@ form {
   text-align:left ;
 }
 
-
 .descricao {
-  color:#ffde59 ;
+  font-weight: bold;
+  color:#5e0214;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -500,6 +501,7 @@ form {
 
 .comenta {
   margin-top: 70px;
+  color:#5e0214 ;
 }
 
 #margem {
@@ -508,7 +510,7 @@ form {
 
 .enviar {
   margin-bottom: 1rem;
-  color:#5e0214 ;
+  color:white ;
 }
 
 /* Estrelas */
@@ -529,7 +531,7 @@ form {
   flex-direction: row-reverse;
   cursor: pointer;
   font-size: 3rem;
-  color: #666;
+  color: black;
 }
 
 .rating:not(:checked) > label::before {
