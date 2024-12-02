@@ -449,10 +449,14 @@ div > h6 {
 .formes {
   text-align: center;
   font-family: "DM Sans", sans-serif;
+  background-image: url(./images/background-contato.jpg);
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover;
 }
 
 form {
-  width: 45rem;
+  width: 45rem; /* Estava 45*/
   text-align: center;
 }
 
@@ -465,6 +469,7 @@ form {
   margin: 20px auto;
   background-color: #5e0214;
   border-radius: 2rem;
+
 }
 
 .ficha {
@@ -476,22 +481,29 @@ form {
 
 .ficha2 {
   height: 5vh;
-  width: 10vw;
+  width: 20vw;
 }
 
-.espaco2 {
-  margin-left: 1rem;
-}
-
-.espaco3 {
-  margin-right: 2.8rem;
+.gambiarra {
+  text-align:left ;
 }
 
 
 .descricao {
-
   color:#ffde59 ;
   font-family: "DM Sans", sans-serif;
+}
+
+.descricao2 {
+  margin-left: 170px;
+}
+
+.comenta {
+  margin-top: 70px;
+}
+
+#margem {
+  margin-top: 50px;
 }
 
 .enviar {
