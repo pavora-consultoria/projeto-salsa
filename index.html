@@ -244,7 +244,7 @@
 
     <section class="formes">
 
-      <form action="#" id="fale">
+      <form action="https://api.staticforms.xyz/submit" method="post" id="fale">
 
         <h2 id="formularioFale">Fale Conosco</h2>
 
@@ -254,7 +254,7 @@
 
         <br>
 
-        <input type="text" id="cNome" class="ficha2">
+        <input type="text" name="name" id="cNome" class="ficha2">
 
         <br><br>
 
@@ -264,13 +264,13 @@
 
         <br>
 
-        <input type="email" id="cEmail" class="ficha2">
+        <input type="text" name="email" id="cEmail" class="ficha2">
 
         <br><br>
 
         <h4 class="descricao comenta">Comentário</h4>
         <br><br>
-        <textarea id="cDuvida" <textarea rows="7" cols="50" class="ficha "></textarea>
+        <textarea id="cDuvida" name="message" rows="7" cols="50" class="ficha "></textarea>
 
         <br><br>
 
@@ -294,7 +294,11 @@
 
         <br><br>
 
+        <input type="hidden" name="accessKey" value="a517255f-3dc4-48e2-bdd4-5b575347cf80">
+        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
         <input type="submit" value="Enviar" class="ficha2 enviar" >
+
+
 
     </section>
 

@@ -488,6 +488,14 @@ div > h6 {
   border: 1px solid #ffde59 ;
 }
 
+.ficha2:hover {
+  background-color: white;
+}
+
+.ficha:hover {
+  background-color: white;
+}
+
 .gambiarra {
   text-align:left ;
 }
@@ -506,6 +514,8 @@ div > h6 {
   padding-top: 20px;
   color:#ffde59 ;
 }
+
+
 
 #margem {
 padding-top: 70px;
