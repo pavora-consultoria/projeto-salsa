@@ -17,9 +17,10 @@
     <nav class="navbar navbar-expand-lg d-flex justify-content-between">
       <div class="container-fluid">
         <div class="logo-nav">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="https://pavora-consultoria.github.io/projeto-salsa/">
             <img src="https://ik.imagekit.io/mnz3yzqzot/2-removebg-preview.png?updatedAt=1732049720856"
-              alt="Logo restaurante salsa." />
+              alt="Logo restaurante salsa."
+              />
           </a>
         </div>
 
@@ -67,11 +68,11 @@
                 <a class="nav-link" href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf"
                   class="cardapio" target="_blank">Cardápio</a>
               </div>
-              <div class="li-item" data-bs-toggle="modal" data-bs-target="#modal" onclick="fecharMenuHamburguer()">
+              <div class="li-item" id="criarReserva" data-bs-toggle="modal" data-bs-target="#modal" onclick="fecharMenuHamburguer()">
                 <a class="nav-link" href="#">Reserva</a>
               </div>
               <div class="li-item" onclick="fecharMenuHamburguer()">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="#rodape">Contato</a>
               </div>
             </div>
           </div>
@@ -134,18 +135,67 @@
             </div>
           </form>
         </div>
-
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
             Cancelar
           </button>
-          <button type="submit" class="btn btn-success" data-bs-dismiss="modal" onclick="enviarSMS()">
+          <button type="submit" class="btn btn-success" id="btn-sucesso" data-bs-dismiss="modal" onclick="confirmaReserva()">
             Confirmar
           </button>
         </div>
       </div>
     </div>
   </div>
+
+  
+
+     <div id="modal-sucesso" class="modal" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                <h5 id="ola" style="text-align: center"><br><br></h5>
+                <p id="mensagem"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div id="modal-fale-conosco" class="modal" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+          <h5 class="modal-title">Fale Conosco</h5>
+        </div>
+
+                <div class="modal-body">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+            <div class="mb-3">
+              <label for="nome-mensagem" class="form-label">Nome:</label>
+              <input type="text" class="form-control" required id="nome-mensagem" />
+            </div>
+            <div class="mb-3">
+              <label for="email-mensagem" class="form-label">Email:</label>
+              <input type="email" class="form-control" required id="email-mensagem">
+            </div>
+            <div class="mb-3">
+              <label for="quantidade" class="form-label">Mensagem:</label>
+               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+             <div class="modal-footer">
+                <input type="hidden" name="accessKey" value="a517255f-3dc4-48e2-bdd4-5b575347cf80">
+        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-success" data-bs-dismiss="modal">
+            Confirmar
+          </button>
+        </div>
+          </form>
+            </div>
+        </div>
+        </div>
+    </div>
 
   <main>
     <div class="home">
@@ -222,140 +272,117 @@
       <section class="menu-options">
         <div class="option" onclick="navigate('menu')">
           <h2 class="rsm">VEJA O CARDÁPIO</h2>
-          <button class="btn1">
             <a href="./images/Cardápio para restaurantes e lanchonetes simples vermelho.pdf" class="lit"
               target="_blank">Clique aqui</a>
-          </button>
         </div>
         <div class="option" onclick="navigate('reserve')">
-          <h2 class="rsm"">RESERVE SUA MESA</h2>
-            <button class=" btn2">
+          <h2 class="rsm">FAÇA SUA RESERVA</h2>
             <a class="lit"
-              href="https://api.whatsapp.com/send?phone=5511982784104&text=Ol%C3%A1,%20Seja%20muito%20bem-vindo(a)!%20Estamos%20felizes%20por%20ter%20voc%C3%AA%20conosco%20e%20prontos%20para%20ajudar%20no%20que%20for%20preciso.%20Conte%20com%20a%20gente!%20Atenciosamente,%20Salsa%0A%0A"
+            data-bs-toggle="modal" data-bs-target="#modal"
               target="_blank">Clique aqui</a>
-            </button>
         </div>
         <div class="option" onclick="navigate('contact')">
           <h2 class="rsm">FALE CONOSCO</h2>
-          <button class="btn3"><a class="lit" href="">Clique aqui</a></button>
+<a class="lit" data-bs-toggle="modal" data-bs-target="#modal-fale-conosco">Clique aqui</a>
         </div>
       </section>
     </div>
 
     <section class="formes">
 
-      <form action="https://api.staticforms.xyz/submit" method="post" id="fale">
 
-        <h2 id="formularioFale">Fale Conosco</h2>
+        <h2 id="formularioFale">Deixe sua avaliação</h2>
 
+      <form id="fale">
         <div class="gambiarra">
-          <label for="cNome" class="descricao descricao2" id="margem">Nome:</label>
+          <label for="nomeAvaliacao" class="descricao descricao2" id="margem">Nome:</label>
         </div>
 
-        <br>
-
-        <input type="text" name="name" id="cNome" class="ficha2">
-
-        <br><br>
-
-        <div class="gambiarra">
-          <label for="cEmail" class="descricao descricao2">E-mail:</label>
-        </div>
-
-        <br>
-
-        <input type="text" name="email" id="cEmail" class="ficha2">
+        <input type="text" name="name" id="nomeAvaliacao" class="ficha2">
 
         <br><br>
 
         <h4 class="descricao comenta">Comentário</h4>
-        <br><br>
-        <textarea id="cDuvida" name="message" rows="7" cols="50" class="ficha "></textarea>
-
-        <br><br>
-
+  
+        <textarea id="comentarioAvaliacao" name="comentarioAvaliacao" rows="7" cols="50" class="ficha" maxlength="130" minlength="1" ></textarea>
+        
+     
         <!-- Estrelhas -->
         <div class="rating">
-          <input value="1" name="rate" id="star1" type="radio">
-          <label title="text" for="star1"></label>
-
-          <input value="2" name="rate" id="star2" type="radio">
-          <label title="text" for="star2"></label>
-
-          <input value="3" name="rate" id="star3" type="radio">
-          <label title="text" for="star3"></label>
+          <input value="5" name="rate" id="star5" type="radio">
+          <label title="text" for="star5"></label>
 
           <input value="4" name="rate" id="star4" type="radio">
           <label title="text" for="star4"></label>
 
-          <input value="5" name="rate" id="star5" type="radio">
-          <label title="text" for="star5"></label>
+          <input value="3" name="rate" id="star3" type="radio">
+          <label title="text" for="star3"></label>
+
+           <input value="2" name="rate" id="star2" type="radio">
+          <label title="text" for="star2"></label>
+
+          <input value="1" name="rate" id="star1" type="radio">
+          <label title="text" for="star1"></label>
         </div>
-
-        <br><br>
-
-        <input type="hidden" name="accessKey" value="a517255f-3dc4-48e2-bdd4-5b575347cf80">
-        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
-        <input type="submit" value="Enviar" class="ficha2 enviar" >
-
+        <button type="submit" class="enviar" id="enviar" onclick="criarAvaliacao()">Enviar</button>
+   </form>
 
 
     </section>
 
-    <section>
+   <section>
+  <div id="carousel-avaliacao" class="carousel carousel-dark" data-bs-ride="carousel" >
+    <div class="carousel-inner">
+      <div class="carousel-avaliacao active">
+        <div class="scroll-container" id="feedback">
+          
+          <div class="avaliacao1">
+            <p class="pessoa">Ermerson Laspa</p>
+            <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009" alt="Avaliação cinco estrelas" class="estrela" />
+            <p>Esse restaurante é incrivel! Gostei muito dos prantos, principalmente da feijoada 😋, sem falar do ambiente extremamente confortável</p>
+          </div>
 
-      <div class="feedback">
-        <div class="avaliacao1">
-          <p class="pessoa">Ermerson Laspa</p>
-          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-            alt="Avaliação cinco estrelas" class="estrela" />
-          <p>
-            Esse restaurante é incrivel! Gostei muito dos prantos,
-            principalmente da feijoada 😋, sem falar do ambiente extremamente
-            confortável
-          </p>
+          <div class="avaliacao1">
+            <p class="pessoa">José Silva</p>
+            <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009" alt="Avaliação cinco estrelas" class="estrela" />
+            <p>Amei demais a decoração do lugar e do atendimento aos clientes, voltarei mais vezes nesse lugar</p>
+          </div>
+
+          <div class="avaliacao1">
+            <p class="pessoa">Thiaguinho Silva</p>
+            <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009" alt="Avaliação cinco estrelas" class="estrela" />
+            <p>Muito bom! a partir de hoje vocês ganharam um cliente vitalício, com certeza irei indicar pros meus amigos</p>
+          </div>
+
+          <div class="avaliacao1">
+            <p class="pessoa">Eduardo Madeira</p>
+            <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009" alt="Avaliação cinco estrelas" class="estrela" />
+            <p>A comida é muito bem temperada, principalmente a virada à paulista, comeria 10 vezes sem dúvidas😂😁</p>
+          </div>
+
+          <div class="avaliacao1">
+            <p class="pessoa">Marcos Rocha</p>
+            <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009" alt="Avaliação cinco estrelas" class="estrela" />
+            <p>Excelente experiência! A comida estava deliciosa, especialmente a feijoada, que estava no ponto.</p>
+          </div>
         </div>
-
-        <div class="avaliacao2">
-          <p class="pessoa">José Silva</p>
-
-          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-            alt="Avaliação cinco estrelas" class="estrela" />
-          <p>
-            Amei demais a decoração do lugar e do atendimento aos clientes,
-            voltarei mais vezes nesse lugar
-          </p>
-        </div>
-
-
-        <div class="avaliacao3">
-          <p class="pessoa">Thiaguinho Silva</p>
-
-          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-            alt="Avaliação cinco estrelas" class="estrela" />
-          <p>
-            Muito bom! a partir de hoje vocês ganharam um cliente vitalício,
-            com certeza irei indicar pros meus amigos
-          </p>
-        </div>
-
-        <div class="avaliacao4">
-          <p class="pessoa">Eduardo Madeira</p>
-
-          <img src="https://ik.imagekit.io/mnz3yzqzot/estrelas.png?updatedAt=1732428668009"
-            alt="Avaliação cinco estrelas" class="estrela" />
-          <p>
-            A comida é muito bem temperada, principalmente a virada à paulista,
-            comeria 10 vezes sem dúvidas😂😁
-          </p>
-        </div>
-
-
       </div>
+    </div>
 
-    </section>
+    <button type="button" class="carousel-control-prev" onclick="scrollPrev()"  style="opacity: 1;">
+      <img class="setas" alt="seta-esquerda" src="/images/seta-esquerda.png">
+    </button>
 
-    <footer class="rodape">
+    <button type="button" class="carousel-control-next" onclick="scrollNext()" style="opacity: 1;">
+        <img class="setas" alt="seta-direita" src="/images/seta-direita.png">
+    </button>
+  </div>
+</section>
+
+
+
+
+    <footer class="rodape" id="rodape">
       <div class="colunas">
         <div class="coluna">
           <h4>Informações de Contato</h4>
@@ -402,7 +429,7 @@
         </div>
       </div>
 
-      <small>
+      <small id="rodape-ultimo">
         <div class="small-box">
 
           <div class="small-direitos">
