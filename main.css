@@ -35,7 +35,7 @@ img {
 }
 
 .navbar-nav .nav-link {
-  color: #f5ecda;
+  color: #ffde59;
 }
 
 .navbar-nav .nav-link:active,
@@ -117,6 +117,10 @@ img {
 
 .carousel-item > img {
   object-fit: cover;
+}
+
+#carrosel-celular {
+  display: none;
 }
 
 .home {
@@ -402,7 +406,7 @@ div > h6 {
 }
 
 .gambiarra {
-  margin-right: 220px;
+  margin-right: 205px;
 }
 
 .descricao {
@@ -484,7 +488,7 @@ div > h6 {
 /* cards -samuel */
 
 .rhr {
-  background-image: url(./images/background-cards.jpg);
+  background-image: url(https://ik.imagekit.io/mnz3yzqzot/26.png?updatedAt=1731556740990);
   background-size: cover;
   background-position: center;
 }
@@ -601,6 +605,11 @@ div > h6 {
   }
 }
 
+#carousel-exemplo2 {
+    display: none;
+  }
+
+
 
 @media (max-width: 768px) {
   .colunas {
@@ -710,6 +719,15 @@ div > h6 {
 }
 
 @media (max-width: 480px) {
+
+  #carousel-exemplo2 {
+    display: block;
+  }
+
+#carousel-exemplo {
+    display: none;
+  }
+
   .rhr {
     height: 100%;
     background-position: center center;
@@ -736,6 +754,7 @@ div > h6 {
 
   .sobre {
     position: relative;
+    margin-top: 800px;
   }
 
   .menu-options {
@@ -767,6 +786,7 @@ div > h6 {
 }
 
 @media (max-width: 380px) {
+
   .sobre-container {
     margin-top: 400px;
     margin-bottom: 560px;

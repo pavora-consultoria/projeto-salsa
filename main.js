@@ -141,7 +141,7 @@ function confirmaReserva() {
 
   setTimeout(() => {
     modalSucesso.hide();
-  }, 6000);
+  }, 8000);
 
   nome.value = "";
   telefone.value = "";
